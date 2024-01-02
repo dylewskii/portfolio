@@ -1,4 +1,29 @@
-/* Lenis CSS */
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- Lenis --- */
 html.lenis {
   height: auto;
 }
@@ -18,3 +43,105 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* --- Fonts --- */
+@font-face {
+  font-family: "ff-heading";
+  src: url("./assets/fonts/Tusca.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ff-body";
+  src: url("./assets/fonts/KOJISA.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ff-body2";
+  src: url("./assets/fonts/Captura-Now-Medium.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ff-body3";
+  src: url("./assets/fonts/Dakdo.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ff-text";
+  src: url("./assets/fonts/Lato-Regular.ttf");
+  font-display: swap;
+}
+
+/* --- Custom Properties --- */
+:root {
+  --bg-clr-dark: hsl(0, 0%, 10%);
+  --bg-clr-light: hsl(50, 16%, 70%);
+  --primary-clr: hsl(0, 0%, 100%);
+  --secondary-clr: hsl(12, 98%, 60%);
+
+  --fs-normal: 1rem;
+  --fs-large: clamp(1rem, 1vw + 1rem, 10rem);
+  --fs-xl: clamp(3rem, 9vw + 1rem, 10rem);
+}
+
+/* --- Base Styles --- */
+h1,
+h2,
+h3 {
+  color: var(--primary-clr);
+  font-family: "ff-heading";
+  font-size: var(--fs-xl);
+}
+
+body {
+  background-color: var(--bg-clr-dark);
+  font-family: "ff-body";
+  font-size: var(--fs-500);
+}
+
+p,
+div,
+img,
+a,
+ul {
+  color: var(--primary-clr);
+}
+
+img,
+a {
+  font-family: "ff-text";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Regular Styles --- */
+header {
+  padding: 5rem 0.5rem 2rem 0.5rem;
+}
+
+.entry__title {
+  font-family: "ff-body3";
+}
+
+.entry__desc {
+  font-family: "ff-text";
+}
+
+/* --- Media Queries--- */
+/* @media (min-width: 320px) {
+  :root {
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-xl: 5rem;
+  }
+} */
