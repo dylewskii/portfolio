@@ -124,16 +124,29 @@ a {
 
 /* --- Regular Styles --- */
 header {
-  padding: 5rem 0.5rem;
+  padding: 10rem 1rem;
 }
 
 header > nav {
   display: none;
 }
 
-.entry__title {
+.about {
+  margin: 5rem 3rem;
+}
+
+.about__title {
   font-family: "ff-body3";
   font-size: var(--fs-large);
+}
+
+.about__desc {
+  font-family: "ff-text";
+}
+
+.entry__title {
+  font-family: "ff-body3";
+  font-size: var(--fs-normal);
 }
 
 .entry__desc {
@@ -191,6 +204,9 @@ header > nav {
     --fs-600: 1.5rem;
     --fs-xl: 5rem;
   } */
+  .about {
+    margin: 10rem 20rem;
+  }
 
   .entry {
     grid-template-columns: calc(10vw + 15rem) calc(10vw + 20rem);
