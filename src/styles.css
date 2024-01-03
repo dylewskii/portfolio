@@ -57,11 +57,11 @@ html.lenis {
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: "ff-body2";
   src: url("./assets/fonts/Captura-Now-Medium.otf");
   font-display: swap;
-}
+} */
 
 @font-face {
   font-family: "ff-body3";
@@ -80,7 +80,8 @@ html.lenis {
   --bg-clr-dark: hsl(0, 0%, 10%);
   --bg-clr-light: hsl(50, 16%, 70%);
   --primary-clr: hsl(0, 0%, 100%);
-  --secondary-clr: hsl(12, 98%, 60%);
+  --secondary-clr: hsl(0, 0%, 61%);
+  --third-clr: hsl(12, 98%, 60%);
 
   --fs-normal: 1rem;
   --fs-large: clamp(1rem, 5vw + 1rem, 10rem);
@@ -88,12 +89,19 @@ html.lenis {
 }
 
 /* --- Base Styles --- */
-h1,
-h2,
-h3 {
+h1 {
   color: var(--primary-clr);
   font-family: "ff-heading";
   font-size: var(--fs-xl);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-clr);
+  font-family: "ff-body3";
 }
 
 body {
@@ -136,7 +144,6 @@ header > nav {
 }
 
 .about__title {
-  font-family: "ff-body3";
   font-size: var(--fs-large);
 }
 
@@ -145,7 +152,6 @@ header > nav {
 }
 
 .entry__title {
-  font-family: "ff-body3";
   font-size: var(--fs-normal);
 }
 
@@ -194,6 +200,26 @@ header > nav {
 
 .entry__media img {
   border-radius: 2rem;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.mail > div,
+.socials > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  color: var(--secondary-clr);
 }
 
 /* --- Media Queries---  */
